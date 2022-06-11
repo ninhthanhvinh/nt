@@ -134,7 +134,40 @@ public class GamePanel extends JPanel implements Runnable {
 
         Graphics2D g2 = (Graphics2D)g;
 
+        tileM.loadMap("/maps/id1.txt");
+
         tileM.draw(g2);
+
+        tileM.loadMap("/maps/id2.txt");
+
+        tileM.draw(g2);
+
+        tileM.loadMap("/maps/id3.txt");
+
+        tileM.draw(g2);
+
+        tileM.loadMap("/maps/id4.txt");
+
+        tileM.draw(g2);
+
+        tileM.loadMap("/maps/id5.txt");
+
+        tileM.draw(g2);
+
+        tileM.loadMap("/maps/id6.txt");
+
+        tileM.draw(g2);
+
+        tileM.loadMap("/maps/id9.txt");
+
+        tileM.draw(g2);
+
+        tileM.loadMap("/maps/id7.txt");
+
+        tileM.draw(g2);
+
+
+        /*tileM.draw(g2);*/
 
         agv.draw(g2);
 

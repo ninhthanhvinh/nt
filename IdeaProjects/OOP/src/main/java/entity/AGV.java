@@ -33,9 +33,9 @@ public class AGV extends Entity{
     }
 
     public void setDefaultValues(){
-        worldX = 23 * gp.tileSize;
-        worldY = 21 * gp.tileSize;
-        speed = 4;
+        worldX = gp.tileSize;
+        worldY = 14 * gp.tileSize;
+        speed = gp.tileSize / 3;
         direction = "down";
     }
 
@@ -50,18 +50,18 @@ public class AGV extends Entity{
     }
 
     public void update()  {
-        if (keyH.upPressed == true || keyH.downPressed == true ||
-                keyH.leftPressed == true || keyH.rightPressed == true) {
-            if (keyH.upPressed == true) {
+        if (keyH.upPressed || keyH.downPressed ||
+                keyH.leftPressed || keyH.rightPressed) {
+            if (keyH.upPressed) {
                 direction = "up";
             }
-            else if (keyH.downPressed == true) {
+            else if (keyH.downPressed) {
                 direction = "down";
             }
-            else if (keyH.leftPressed == true) {
+            else if (keyH.leftPressed) {
                 direction = "left";
             }
-            else if (keyH.rightPressed == true) {
+            else {
                 direction = "right";
             }
 
@@ -76,16 +76,6 @@ public class AGV extends Entity{
                     case "left": worldX -= speed; break;
                     case "right": worldX += speed; break;
                 }
-            }
-
-            spriteCounter++;
-            if (spriteCounter >= 12) {
-                if (spriteNum == 1) {
-                    spriteNum = 2;
-                }
-                else if (spriteNum == 2)
-                    spriteNum = 1;
-                spriteCounter = 0;
             }
         }
     }
